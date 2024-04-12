@@ -57,7 +57,7 @@ public class StudentManager implements ManagerInterface<Student> {
         int student = findById(id);
         if (student == id) {
             System.out.println("Student with ID " + id + " not found.");
-            return -1; // Trả về -1 nếu không tìm thấy học viên
+            return -1;
         }
         double average = student;
         System.out.println("Average score of student with ID " + id + ": " + average);

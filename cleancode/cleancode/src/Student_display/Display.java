@@ -114,16 +114,13 @@ public class Display {
     private void calculateClassAverage() {
         System.out.println("How many students are there in the class?");
         int numStudents = inputInt.nextInt();
-        inputInt.nextLine(); // Đọc ký tự thừa sau khi nhập số
-        // Khởi tạo mảng để lưu trữ điểm trung bình của từng sinh viên
+        inputInt.nextLine();
         double[] averages = new double[numStudents];
-        // Nhập điểm trung bình của từng sinh viên
         for (int i = 0; i < numStudents; i++) {
             System.out.println("Enter average score for student " + (i + 1) + ": ");
             averages[i] = inputInt.nextDouble();
-            inputInt.nextLine(); // Đọc ký tự thừa sau khi nhập số
+            inputInt.nextLine();
         }
-        // Tính toán điểm trung bình của lớp
         double totalScore = 0.0;
         for (double average : averages) {
             totalScore += average;

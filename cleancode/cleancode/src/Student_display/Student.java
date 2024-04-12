@@ -65,15 +65,15 @@ public class Student {
     }
     public double getAverageScore() {
         if (point.length == 0) {
-            return 0.0; // Trả về 0 nếu không có điểm nào được cung cấp
+            return 0.0;
         }
 
         double sumScore = 0;
         for (double point : point) {
-            sumScore += point; // Tính tổng điểm của sinh viên
+            sumScore += point;
         }
 
-        return sumScore / point.length; // Trả về điểm trung bình
+        return sumScore / point.length; 
     }
 
 
