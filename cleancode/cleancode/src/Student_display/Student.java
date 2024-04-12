@@ -63,13 +63,26 @@ public class Student {
     public void setPoint(double[] point) {
         this.point = point;
     }
+    public double getAverageScore() {
+        if (point.length == 0) {
+            return 0.0; // Trả về 0 nếu không có điểm nào được cung cấp
+        }
+
+        double sumScore = 0;
+        for (double point : point) {
+            sumScore += point; // Tính tổng điểm của sinh viên
+        }
+
+        return sumScore / point.length; // Trả về điểm trung bình
+    }
+
 
     @Override
     public String toString() {
         return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
+                "id=" + this.id +
+                ", name='" + this.name + '\'' +
+                ", gender='" + this.gender + '\'' +
                 ", point=" + Arrays.toString(point) +
                 '}';
     }

@@ -17,7 +17,7 @@ public class Display {
     public void showDisplay() {
         int choose;
         do {
-            System.out.println("Student management \n1. Add student\n2.Delete\n3.Edit\n4.Find by ID\n5.Display all\n0. Exit");
+            System.out.println("Student management \n1. Add student\n2.Calculate Class Average Score\n3.Delete\n4.Edit\n5.Find by ID\n6.Display all\n0. Exit");
             System.out.println("Enter your choice : ");
             choose = Integer.parseInt(this.inputInt.nextLine());
             switch (choose) {
@@ -25,12 +25,17 @@ public class Display {
                     this.showAdd();
                     break;
                 case 2:
-                    this.showDelete();
+                    this.calculateClassAverage();
                     break;
                 case 3:
-                    this.showEdit();
+                    this.showDelete();
                     break;
                 case 4:
+                    this.showEdit();
+                    break;
+                case 5:
+                    this.findStudentById();
+                case 6:
                     this.showAll();
                     break;
             }
@@ -89,7 +94,43 @@ public class Display {
         System.out.println("Delete");
         System.out.println("Enter ID: ");
         int idDelete = inputInt.nextInt();
+        inputInt.nextLine();
         studentManager.delete(idDelete);
         System.out.println("Complete!!");
     }
+    private void findStudentById() {
+        System.out.println("Enter student ID to find: ");
+        int id = inputString.nextInt();
+        inputString.nextLine();
+        int index = studentManager.findById(id);
+        if (index != -1) {
+            Student foundStudent = studentManager.findAll()[index];
+            System.out.println("Found student:");
+            System.out.println(foundStudent);
+        } else {
+            System.out.println("Student not found with ID: " + id);
+        }
+    }
+    private void calculateClassAverage() {
+        System.out.println("How many students are there in the class?");
+        int numStudents = inputInt.nextInt();
+        inputInt.nextLine(); // Đọc ký tự thừa sau khi nhập số
+        // Khởi tạo mảng để lưu trữ điểm trung bình của từng sinh viên
+        double[] averages = new double[numStudents];
+        // Nhập điểm trung bình của từng sinh viên
+        for (int i = 0; i < numStudents; i++) {
+            System.out.println("Enter average score for student " + (i + 1) + ": ");
+            averages[i] = inputInt.nextDouble();
+            inputInt.nextLine(); // Đọc ký tự thừa sau khi nhập số
+        }
+        // Tính toán điểm trung bình của lớp
+        double totalScore = 0.0;
+        for (double average : averages) {
+            totalScore += average;
+        }
+        double classAverage = totalScore / numStudents;
+
+        System.out.println("Class average score: " + classAverage);
+    }
 }
+
