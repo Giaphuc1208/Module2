@@ -53,7 +53,6 @@ public class StudentManager implements ManagerInterface<Student> {
         return this.size;
     }
     public double calculateAverageById(int id) {
-        // Tìm học viên theo ID
         int student = findById(id);
         if (student == id) {
             System.out.println("Student with ID " + id + " not found.");

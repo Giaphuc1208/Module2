@@ -73,7 +73,7 @@ public class Student {
             sumScore += point;
         }
 
-        return sumScore / point.length; 
+        return sumScore / point.length;
     }
 
 
