@@ -39,4 +39,17 @@ public class HotelController {
     public void show() {
         this.guests.forEach(p -> System.out.println(p.toString()));
     }
+
+    public void bubbleSort() {
+        int n = guests.size();
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (guests.get(j).getPassport().compareTo(guests.get(j + 1).getPassport()) > 0) {
+                    Guest temp = guests.get(j);
+                    guests.set(j, guests.get(j + 1));
+                    guests.set(j + 1, temp);
+                }
+            }
+        }
+    }
 }

@@ -61,10 +61,6 @@ public class Guest {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", passport='" + passport + '\'' + room.toString() +
-                '}';
+        return "Person: name='%s', age=%d, passport='%s'%s".formatted(name, age, passport, room.toString());
     }
 }
