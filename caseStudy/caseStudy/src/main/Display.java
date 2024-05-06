@@ -20,7 +20,7 @@ public class Display {
                 System.out.println("Enter 1: To insert person for rent: ");
                 System.out.println("Enter 2: To remove person by passport: ");
                 System.out.println("Enter 3: To calculator price by passport: ");
-                System.out.println("Enter 4: To show infor: ");
+                System.out.println("Enter 4: To show information: ");
                 System.out.println("Enter 5: To exit: ");
                 String line = scanner.nextLine();
                 switch(line) {
@@ -31,9 +31,9 @@ public class Display {
                         int age = Integer.parseInt(scanner.nextLine());
                         System.out.print("Enter passport: ");
                         String passport = scanner.nextLine();
-                        System.out.println("Choise 1 to rent room type Deluxe");
-                        System.out.println("Choise 2 to rent room type Double");
-                        System.out.println("Choise 3 to rent room type Family");
+                        System.out.println("Choose 1 to rent room type Deluxe");
+                        System.out.println("Choose 2 to rent room type Double");
+                        System.out.println("Choose 3 to rent room type Family");
                         String choise = scanner.nextLine();
                         Room room;
                         switch (choise) {
