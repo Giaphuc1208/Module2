@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -24,9 +23,17 @@ public class Main {
                     products.deleteProduct(scanner);
                     break;
                 case 5:
+                    products.sortProduct();
+                    break;
                 case 6:
+                    products.findProductbyMaxPrice();
+                    break;
                 case 7:
+                   CsvWriteAndReadFile.readFile();
+                   break;
                 case 8:
+                    CsvWriteAndReadFile.writeFile();
+                    break;
                 case 9:
                     System.exit(0);
                     break;
@@ -51,13 +58,13 @@ public class Main {
     }
 
     private static void displayListProduct(int currentPage){
-        if(products.getProducts().isEmpty()){
+        if(products.getProductList().isEmpty()){
             System.out.println("There's no product");
             return;
         }
         int perPage = 5;
         for (int i = currentPage * perPage; i < currentPage * perPage + perPage ; i++) {
-            if(i >= products.getProducts().size()){
+            if(i >= products.getProductList().size()){
                 return;
             }
             System.out.println(products.getProductByIndex(i));

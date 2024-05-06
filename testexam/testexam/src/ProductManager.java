@@ -1,20 +1,20 @@
 import java.util.*;
 
-import static java.util.Collection.*;
+import static java.util.Collections.sort;
 
 public class ProductManager {
-    List<Product> products = new ArrayList<>();
+    public static  List<Product> productList = new ArrayList<>();
     private static final Scanner scanner = new Scanner(System.in);
 
     public ProductManager() {
     }
 
     public void addNewProduct(Product product){
-        products.add(product);
+        productList.add(product);
     }
 
     public void removeProduct(String code) {
-        Iterator<Product> iterator = products.iterator();
+        Iterator<Product> iterator = productList.iterator();
         while (iterator.hasNext()) {
             Product product = iterator.next();
             if (product.getCode().equals(code)) {
@@ -36,7 +36,7 @@ public class ProductManager {
             if (deleteCode != null){
                 System.out.println("Product needs to delete:");
                 System.out.println(deleteCode);
-                System.out.println("Are you sure you want to delete this product? (Y/N):");
+                System.out.println("Are you sure you want to delete this product? (press Y):");
                 String confirm = scanner.nextLine();
                 if(confirm.equalsIgnoreCase("Y")){
                     removeProduct(deleteCode);
@@ -48,26 +48,34 @@ public class ProductManager {
             }
         }
     }
-
-    public void sortProduct(Scanner scanner){
-        boolean sortMenu = true;
-        while (sortMenu){
-            System.out.println("Select sort:");
-            System.out.println("1. Arrange at incremental prices");
-            System.out.println("2. Arrange at reduced prices");
-            System.out.println("3. Back to Main Menu");
-            System.out.println("Choose: ");
-            int sortChoice = Integer.parseInt(scanner.nextLine());
-            switch (sortChoice){
-                case 1:
-                  Collection.sort
-            }
+    public void sortProduct(){
+        System.out.println("Choose 1 or 2 to sort product by price: ");
+        int choiceSort = Integer.parseInt(scanner.nextLine());
+        switch (choiceSort){
+            case 1:
+                System.out.println("Go up prices");
+                goUpPrice();
+                break;
+            case 2:
+                System.out.println("Go down prices");
+                goDownPrice();
+                break;
+            case 3:
+                return;
         }
+    }
+
+    public void goUpPrice(){
+        productList.sort(new CompareByPrice());
+    }
+
+    public void goDownPrice(){
+        productList.sort(new CompareByPrice().reversed());
     }
 
 
     public Product findProductByCode(String product){
-        for (Product product1 : products){
+        for (Product product1 : productList){
             if (product1.getCode().equals(product)){
                 return product1;
             }
@@ -75,10 +83,21 @@ public class ProductManager {
         return null;
     }
 
-    public List<Product> getProducts(){
-        return products;
+    public void findProductbyMaxPrice(){
+        Product priceMax = productList.get(0);
+        for (Product product : productList){
+            if(priceMax.getPrice() < product.getPrice()){
+                priceMax = product;
+            }
+        }
+        System.out.println("Product with max price is: " + priceMax);
+    }
+
+
+    public List<Product> getProductList(){
+        return productList;
     }
     public Product getProductByIndex(int index) {
-        return products.get(index);
+        return productList.get(index);
     }
 }
