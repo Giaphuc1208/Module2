@@ -1,10 +1,9 @@
 package service.data;
 
-import model.contract.Contract;
-import model.design.Facility;
-import model.design.House;
-import model.design.Room;
-import model.design.Villa;
+import model.blueprint.Facility;
+import model.blueprint.GardenViewStudio;
+import model.blueprint.SuiteStudio;
+import model.blueprint.StudioDeluxe;
 
 import java.io.*;
 import java.util.LinkedHashMap;
@@ -17,17 +16,17 @@ public class ReadAndWriteToCSVFacility {
             fileWriter = new FileWriter(pathFile, append);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (Facility facility : linkedHashMapHouse.keySet()) {
-                if (facility instanceof House) {
-                    House house = (House) facility;
-                    bufferedWriter.write(house.getInfoHouseToCSV());
+                if (facility instanceof GardenViewStudio) {
+                    GardenViewStudio garden = (GardenViewStudio) facility;
+                    bufferedWriter.write(garden.getInfoGardenToCSV());
                 }
-                if (facility instanceof Room    ) {
-                    Room room = (Room) facility;
-                    bufferedWriter.write(room.getInfoRoomToCSV());
+                if (facility instanceof SuiteStudio) {
+                    SuiteStudio suite = (SuiteStudio) facility;
+                    bufferedWriter.write(suite.getInfoSuiteToCSV());
                 }
-                if (facility instanceof Villa) {
-                    Villa villa = (Villa) facility;
-                    bufferedWriter.write(villa.getInfoVillaToCSV());
+                if (facility instanceof StudioDeluxe) {
+                    StudioDeluxe deluxe = (StudioDeluxe) facility;
+                    bufferedWriter.write(deluxe.getInfoDeluxeToCSV());
                 }
                 bufferedWriter.newLine();
             }
@@ -45,10 +44,10 @@ public class ReadAndWriteToCSVFacility {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             String[] map;
-            House house;
+            GardenViewStudio house;
             while ((line = bufferedReader.readLine()) != null) {
                 map = line.split(",");
-                house = new House(map[0], Double.parseDouble(map[1]), Double.parseDouble(map[2]), Integer.parseInt(map[3]),
+                house = new GardenViewStudio(map[0], Double.parseDouble(map[1]), Double.parseDouble(map[2]), Integer.parseInt(map[3]),
                         map[4], map[5], map[6]);
                 linkedHashMap.put(house, 0);
             }
@@ -66,12 +65,12 @@ public class ReadAndWriteToCSVFacility {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             String[] map;
-            Villa villa;
+            StudioDeluxe studioDeluxe;
             while ((line = bufferedReader.readLine()) != null) {
                 map = line.split(",");
-                villa = new Villa(map[0], Double.parseDouble(map[1]), Double.parseDouble(map[2]), Integer.parseInt(map[3]),
+                studioDeluxe = new StudioDeluxe(map[0], Double.parseDouble(map[1]), Double.parseDouble(map[2]), Integer.parseInt(map[3]),
                         map[4], map[5], map[6]);
-                linkedHashMap.put(villa, 0);
+                linkedHashMap.put(studioDeluxe, 0);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -88,12 +87,12 @@ public class ReadAndWriteToCSVFacility {
 
             String line;
             String[] map;
-            Room room;
+            SuiteStudio suiteStudio;
             while ((line = bufferedReader.readLine()) != null) {
                 map = line.split(",");
-                room = new Room(map[0], Double.parseDouble(map[1]), Double.parseDouble(map[2]), Integer.parseInt(map[3]), map[4],
+                suiteStudio = new SuiteStudio(map[0], Double.parseDouble(map[1]), Double.parseDouble(map[2]), Integer.parseInt(map[3]), map[4],
                         map[5]);
-                linkedHashMap.put(room, 0);
+                linkedHashMap.put(suiteStudio, 0);
             }
         } catch (IOException e) {
             e.printStackTrace();

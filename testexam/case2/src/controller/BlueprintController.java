@@ -5,9 +5,9 @@ import service.method.FacilityServiceImpl;
 
 import java.util.Scanner;
 
-import static controller.ResortController.displayMainMenu;
+import static controller.DukeCasaApartmentController.displayMainMenu;
 
-public class DesignController {
+public class BlueprintController {
     static int choice = -1;
     static Scanner input = new Scanner(System.in);
 

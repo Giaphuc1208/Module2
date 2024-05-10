@@ -1,13 +1,12 @@
 package service.method;
 
-import model.design.Facility;
-import model.design.House;
-import model.design.Room;
-import model.design.Villa;
+import model.blueprint.Facility;
+import model.blueprint.GardenViewStudio;
+import model.blueprint.SuiteStudio;
+import model.blueprint.StudioDeluxe;
 import service.data.RegexDesign;
 import service.intef.DesignService;
 
-import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -16,30 +15,30 @@ import static service.data.ReadAndWriteToCSVFacility.*;
 
 public class FacilityServiceImpl implements DesignService {
     private static Scanner scanner = new Scanner(System.in);
-    public static final String PATH_HOUSE = "D:\\Dowload\\Module2\\baitap\\testexam\\case2\\src\\file\\house.csv";
-    public static final String PATH_ROOM = "D:\\Dowload\\Module2\\baitap\\testexam\\case2\\src\\file\\room.csv";
-    public static final String PATH_VILLA = "D:\\Dowload\\Module2\\baitap\\testexam\\case2\\src\\file\\villa.csv";
+    public static final String PATH_GARDEN = "D:\\Dowload\\Module2\\baitap\\testexam\\case2\\src\\file\\garden.csv";
+    public static final String PATH_SUITE = "D:\\Dowload\\Module2\\baitap\\testexam\\case2\\src\\file\\suite.csv";
+    public static final String PATH_DELUXE = "D:\\Dowload\\Module2\\baitap\\testexam\\case2\\src\\file\\deluxe.csv";
 
     @Override
     public void addNewFacility()  {
-        System.out.println("1. Add New Villa");
-        System.out.println("2. Add New House");
-        System.out.println("3. Add New Room");
+        System.out.println("1. Add New Studio Deluxe");
+        System.out.println("2. Add New Garden View Studio");
+        System.out.println("3. Add New Suite Studio");
         System.out.println("4. Back to menu");
         System.out.println("Enter choice");
         int input;
         input = Integer.parseInt(scanner.nextLine());
         switch (input) {
             case 1:
-                addNewVilla();
+                addNewDeluxe();
                 addNewFacility();
                 break;
             case 2:
-                addNewHouse();
+                addNewGarden();
                 addNewFacility();
                 break;
             case 3:
-                addNewRoom();
+                addNewSuite();
                 addNewFacility();
                 break;
             case 4:
@@ -53,115 +52,117 @@ public class FacilityServiceImpl implements DesignService {
 
     @Override
     public void displayList()  {
-        Map<Facility, Integer> facilityHouse = readHouseToCSV(PATH_HOUSE);
-        Map<Facility, Integer> facilityVilla = readVillaToCSV(PATH_VILLA);
-        Map<Facility, Integer> facilityRoom = readRoomToCSV(PATH_ROOM);
+        Map<Facility, Integer> facilityGarden = readHouseToCSV(PATH_GARDEN);
+        Map<Facility, Integer> facilityDeluxe = readVillaToCSV(PATH_DELUXE);
+        Map<Facility, Integer> facilitySuite = readRoomToCSV(PATH_SUITE);
         System.out.println("The facility list as below:");
-        if (facilityHouse != null) {
-            System.out.println("Data House");
-            for (Facility item : facilityHouse.keySet()) {
-                System.out.println("House: " + item.toString() + "\t value: " + facilityHouse.get(item));
+        if (facilityGarden != null) {
+            System.out.println("Data Garden View Studio");
+            for (Facility item : facilityGarden.keySet()) {
+                System.out.println("Garden View Studio: " + item.toString() + "\t value: " + facilityGarden.get(item));
             }
         }
-        if (facilityVilla != null) {
-            System.out.println("Data Villa");
-            for (Facility item : facilityVilla.keySet()) {
-                System.out.println("Villa: " + item.toString() + "\t value: " + facilityVilla.get(item));
+        if (facilityDeluxe != null) {
+            System.out.println("Data Deluxe Studio");
+            for (Facility item : facilityDeluxe.keySet()) {
+                System.out.println("Deluxe Studio: " + item.toString() + "\t value: " + facilityDeluxe.get(item));
             }
         }
-        if (facilityRoom != null) {
-            System.out.println("Data Room");
-            for (Facility item : facilityRoom.keySet()) {
-                System.out.println("Room: " + item.toString() + "\t value: " + facilityRoom.get(item));
+        if (facilitySuite != null) {
+            System.out.println("Data Suite Studio");
+            for (Facility item : facilitySuite.keySet()) {
+                System.out.println("Suite Studio: " + item.toString() + "\t value: " + facilitySuite.get(item));
             }
         }
     }
 
-    @Override
-    public void addNewVilla()  {
-        LinkedHashMap<Facility, Integer> facilityVilla = readVillaToCSV(PATH_VILLA);
-        System.out.println("Add a new Villa ");
-        Villa villa = validateInfoVilla();
-        facilityVilla.put(villa, 0);
 
-        writeMapTOCSV(facilityVilla,PATH_VILLA,false);
+
+    @Override
+    public void addNewDeluxe()  {
+        LinkedHashMap<Facility, Integer> facilityVilla = readVillaToCSV(PATH_DELUXE);
+        System.out.println("Add a new Deluxe Studio ");
+        StudioDeluxe studioDeluxe = validateInfoDeluxe();
+        facilityVilla.put(studioDeluxe, 0);
+
+        writeMapTOCSV(facilityVilla,PATH_DELUXE,false);
         displayList();
     }
 
     @Override
-    public Villa validateInfoVilla() {
+    public StudioDeluxe validateInfoDeluxe() {
         String serviceName = RegexDesign.inputServiceName();
         double usableArea = RegexDesign.inputUsableArea();
         double rentalCost = RegexDesign.inputRentalCost();
         int maxCapacity = RegexDesign.inputMaxCapacity();
         String rentalType = RegexDesign.inputRentalType();
-        String serviceCode = RegexDesign.inputMDVVilla();
-        String roomStandard = RegexDesign.inputStandard();
-        return new Villa(serviceName, usableArea, rentalCost, maxCapacity,
-                rentalType, serviceCode, roomStandard);
+        String deluxeCode = RegexDesign.inputDeluxeCode();
+        String floors = RegexDesign.inputFloors();
+        return new StudioDeluxe(serviceName, usableArea, rentalCost, maxCapacity,
+                rentalType, deluxeCode, floors);
     }
 
     @Override
-    public void addNewRoom() {
-        LinkedHashMap<Facility, Integer> facilityRoom = readRoomToCSV(PATH_ROOM);
-        System.out.println("Add a new Room");
-        Room room = validateInfoRoom();
-        facilityRoom.put(room, 0);
-        writeMapTOCSV(facilityRoom,PATH_ROOM,false);
+    public void addNewSuite() {
+        LinkedHashMap<Facility, Integer> facilityRoom = readRoomToCSV(PATH_SUITE);
+        System.out.println("Add a new Suite Studio");
+        SuiteStudio suiteStudio = validateInfoSuite();
+        facilityRoom.put(suiteStudio, 0);
+        writeMapTOCSV(facilityRoom,PATH_SUITE,false);
         displayList();
     }
 
     @Override
-    public Room validateInfoRoom() {
+    public SuiteStudio validateInfoSuite() {
         String serviceName = RegexDesign.inputServiceName();
         double usableArea = RegexDesign.inputUsableArea();
         double rentalCost = RegexDesign.inputRentalCost();
         int maxCapacity = RegexDesign.inputMaxCapacity();
         String rentalType = RegexDesign.inputRentalType();
-        String mDVRoom = RegexDesign.inputMDVRoom();;
-        return new Room(serviceName, usableArea, rentalCost, maxCapacity, rentalType, mDVRoom);
+        String codeSuite = RegexDesign.inputSuiteCode();;
+        return new SuiteStudio(serviceName, usableArea, rentalCost, maxCapacity, rentalType, codeSuite);
     }
 
     @Override
-    public void addNewHouse()  {
-        LinkedHashMap<Facility, Integer> facilityRoom = readHouseToCSV(PATH_HOUSE);
-        System.out.println("Add a new House");
-        House house = validateInfoHouse();
+    public void addNewGarden()  {
+        LinkedHashMap<Facility, Integer> facilityRoom = readHouseToCSV(PATH_GARDEN);
+        System.out.println("Add a new Garden View Studio");
+        GardenViewStudio house = validateInfoGarden();
         facilityRoom.put(house, 0);
-        writeMapTOCSV(facilityRoom, PATH_HOUSE, false);
+        writeMapTOCSV(facilityRoom, PATH_GARDEN, false);
         displayList();
     }
 
     @Override
-    public House validateInfoHouse() {
+    public GardenViewStudio validateInfoGarden() {
         String serviceName = RegexDesign.inputServiceName();
         double usableArea = RegexDesign.inputUsableArea();
         double rentalCost = RegexDesign.inputRentalCost();
         int maxCapacity = RegexDesign.inputMaxCapacity();
         String rentalType = RegexDesign.inputRentalType();
-        String serviceCode = RegexDesign.inputMDVHouse();
-        String roomStandard = RegexDesign.inputStandard();
+        String gardenCode = RegexDesign.inputGardenCode();
+        String floors = RegexDesign.inputFloors();
 
-        return new House(serviceName, usableArea, rentalCost, maxCapacity, rentalType, serviceCode, roomStandard);
+        return new GardenViewStudio(serviceName, usableArea, rentalCost, maxCapacity, rentalType, gardenCode, floors);
     }
 
     @Override
     public void displayListUsed() {
-        Map<Facility, Integer> facilityHouse = readHouseToCSV(PATH_HOUSE);
-        Map<Facility, Integer> facilityVilla = readVillaToCSV(PATH_VILLA);
-        Map<Facility, Integer> facilityRoom = readRoomToCSV(PATH_ROOM);
+        Map<Facility, Integer> facilityGarden = readHouseToCSV(PATH_GARDEN);
+        Map<Facility, Integer> facilityDeluxe = readVillaToCSV(PATH_DELUXE);
+        Map<Facility, Integer> facilitySuite = readRoomToCSV(PATH_SUITE);
         System.out.println("Display list facility maintenance (used to >=5) : ");
-        for (Map.Entry<Facility, Integer> item : facilityHouse.entrySet()) {
+        for (Map.Entry<Facility, Integer> item : facilityGarden.entrySet()) {
             if (item.getValue() >= 5) {
                 System.out.println(item.getKey() + "  " + item.getValue());
             }
         }
-        for (Map.Entry<Facility, Integer> item : facilityVilla.entrySet()) {
+        for (Map.Entry<Facility, Integer> item : facilityDeluxe.entrySet()) {
             if (item.getValue() >= 5) {
                 System.out.println(item.getKey() + "  " + item.getValue());
             }
         }
-        for (Map.Entry<Facility, Integer> item : facilityRoom.entrySet()) {
+        for (Map.Entry<Facility, Integer> item : facilitySuite.entrySet()) {
             if (item.getValue() >= 5) {
                 System.out.println(item.getKey() + "  " + item.getValue());
             }

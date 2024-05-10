@@ -1,8 +1,8 @@
 package service.intef;
 
-import model.design.House;
-import model.design.Room;
-import model.design.Villa;
+import model.blueprint.GardenViewStudio;
+import model.blueprint.SuiteStudio;
+import model.blueprint.StudioDeluxe;
 
 import java.io.IOException;
 
@@ -11,17 +11,17 @@ public interface DesignService extends Service{
 
     void displayList() throws IOException;
 
-    void addNewVilla() throws IOException;
+    void addNewDeluxe() throws IOException;
 
-    Villa validateInfoVilla();
+    StudioDeluxe validateInfoDeluxe();
 
-    void addNewRoom() throws IOException;
+    void addNewSuite() throws IOException;
 
-    Room validateInfoRoom();
+    SuiteStudio validateInfoSuite();
 
-    void addNewHouse() throws IOException;
+    void addNewGarden() throws IOException;
 
-    House validateInfoHouse();
+    GardenViewStudio validateInfoGarden();
 
     void displayListUsed();
 }

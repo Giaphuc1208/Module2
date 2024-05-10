@@ -4,8 +4,8 @@ import service.data.RegexMenu;
 
 import java.util.Scanner;
 
-import static controller.DesignController.FacilityManagement;
-import static controller.ResortController.displayMainMenu;
+import static controller.BlueprintController.FacilityManagement;
+import static controller.DukeCasaApartmentController.displayMainMenu;
 
 public class BookingController {
     static int choice = -1;

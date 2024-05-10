@@ -3,42 +3,42 @@ package service.data;
 import java.util.Scanner;
 
 public class RegexDesign {
-    private static final String REGEX_MDV_HOUSE = "^HS-\\d{5}$";
-    private static final String REGEX_MDV_ROOM = "^R-\\d{5}$";
-    private static final String REGEX_MDV_VILLA = "^VL-\\d{5}$";
-    private static final String REGEX_NAME_SERVICE = "^[0-9\\sA-Za-z0-9.,_-]{3,30}$";
-    private static final String REGEX_RENTAL_TYPE = "([a-z])\\w+";
-    private static final String REGEX_STANDARD_ROOM = "(Standard|Superior|Deluxe|Suite)";
+    private static final String REGEX_CODE_GARDEN = "^G-\\d{5}$";
+    private static final String REGEX_CODE_SUITE = "^S-\\d{5}$";
+    private static final String REGEX_CODE_DELUXE = "^DL-\\d{5}$";
+    private static final String REGEX_NAME_SERVICE = "(^[^\\\\W_*]+((\\\\.?[\\\\W\\\\~-]+)*\\\\.?[^\\\\W_*])*$)";
+    private static final String REGEX_RENTAL_TYPE = "(^[^\\\\W_*]+((\\\\.?[\\\\W\\\\~-]+)*\\\\.?[^\\\\W_*])*$)";
+    private static final String REGEX_STANDARD_ROOM = "([1-8])";
     static Scanner scanner = new Scanner(System.in);
 
-    public static String inputMDVHouse(){
-        System.out.println("Enter your MDV: ");
-        String mdvHouse = scanner.nextLine();
-        while (!mdvHouse.matches(REGEX_MDV_HOUSE)){
+    public static String inputGardenCode(){
+        System.out.println("Enter Garden View Studio code: ");
+        String codeGarden = scanner.nextLine();
+        while (!codeGarden.matches(REGEX_CODE_GARDEN)){
             try{
-                System.out.println("Invalid, please re-enter!!(VD : SVHO-****)");
-                mdvHouse = scanner.nextLine();
+                System.out.println("Invalid, please re-enter!!(Example : G-*****)");
+                codeGarden = scanner.nextLine();
             } catch (NumberFormatException e){
                 System.err.println("Invalid, please re-enter!!");
             }
         }
-        return mdvHouse;
+        return codeGarden;
     }
 
-    public static String inputMDVRoom(){
-        System.out.println("Enter your MDV: ");
-        String mdvRoom = scanner.nextLine();
-        while (!mdvRoom.matches(REGEX_MDV_ROOM)){
+    public static String inputSuiteCode(){
+        System.out.println("Enter Suite Studio code: ");
+        String codeSuite = scanner.nextLine();
+        while (!codeSuite.matches(REGEX_CODE_SUITE)){
             System.err.println("Invalid, please re-enter!!");
-            mdvRoom = scanner.nextLine();
+            codeSuite = scanner.nextLine();
         }
-        return mdvRoom;
+        return codeSuite;
     }
 
-    public static String inputMDVVilla(){
-        System.out.println("Enter your MDV: ");
+    public static String inputDeluxeCode(){
+        System.out.println("Enter Deluxe Studio code: ");
         String mdvVilla = scanner.nextLine();
-        while (!mdvVilla.matches(REGEX_MDV_VILLA)){
+        while (!mdvVilla.matches(REGEX_CODE_DELUXE)){
             System.err.println("Invalid, please re-enter!!");
             mdvVilla = scanner.nextLine();
         }
@@ -46,17 +46,17 @@ public class RegexDesign {
     }
 
     public static String inputServiceName(){
-        System.out.println("Enter the service you choose: ");
+        System.out.println("Enter the service of facility: ");
         String serviceName = scanner.nextLine();
         while (!serviceName.matches(REGEX_NAME_SERVICE)){
-            System.err.println("It's not us service,we very sorry, please choose again!");
+            System.err.println("We don't have these service, please enter again!");
             serviceName = scanner.nextLine();
         }
         return serviceName;
     }
 
     public static String inputRentalType(){
-        System.out.println("Enter the rental type you want to rent: ");
+        System.out.println("Enter the rental type of facility: ");
         String rentalType = scanner.nextLine();
         while (!rentalType.matches(REGEX_RENTAL_TYPE)){
             System.err.println("Invalid, please re-enter!!");
@@ -64,31 +64,17 @@ public class RegexDesign {
         return rentalType;
     }
 
-    public static String inputStandard(){
-        System.out.println("Enter standard room you want to rent: ");
+    public static String inputFloors(){
+        System.out.println("Enter floors of facility: ");
         String standard = scanner.nextLine();
         while (!standard.matches(REGEX_STANDARD_ROOM)){
             System.err.println("Invalid, please re-enter!!");
-            System.out.println("choose Standard|Superior|Deluxe|Suite|Connecting room");
+            System.out.println("choose 1|2|3|4|5|6|7|8");
             standard = scanner.nextLine();
         }
         return standard;
     }
 
-
-    public static Integer inputFloor(){
-        int floors;
-        do{
-            try{
-                System.out.println("Enter floors: ");
-                floors = Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException e){
-                System.out.println("Please enter floors: ");
-                floors = -1;
-            }
-        }while (floors <= 0);
-            return floors;
-    }
 
     public static Integer inputMaxCapacity(){
         int maxCapacity;
@@ -122,7 +108,7 @@ public class RegexDesign {
         double usableArea;
         do {
             try {
-                System.out.println("Enter usable Area :");
+                System.out.println("Enter usable Area of Facility :");
                 usableArea = Double.parseDouble(scanner.nextLine());
             } catch (NumberFormatException e) {
                 System.out.println("Please enter usable area more than 30 ! ");

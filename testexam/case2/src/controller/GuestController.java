@@ -5,7 +5,7 @@ import service.method.CustomerServiceImpl;
 
 import java.util.Scanner;
 
-import static controller.ResortController.displayMainMenu;
+import static controller.DukeCasaApartmentController.displayMainMenu;
 
 public class GuestController {
     static int choice = -1;

@@ -3,7 +3,7 @@ package controller;
 import service.data.RegexMenu;
 import service.method.StaffServiceImpl;
 
-import static controller.ResortController.displayMainMenu;
+import static controller.DukeCasaApartmentController.displayMainMenu;
 
 
 public class StaffController {

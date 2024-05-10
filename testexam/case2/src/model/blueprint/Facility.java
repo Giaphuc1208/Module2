@@ -1,4 +1,4 @@
-package model.design;
+package model.blueprint;
 
 public class Facility {
     private String serviceName;
