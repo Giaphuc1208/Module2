@@ -60,19 +60,19 @@ public class FacilityServiceImpl implements DesignService {
         if (facilityHouse != null) {
             System.out.println("Data House");
             for (Facility item : facilityHouse.keySet()) {
-                System.out.println("key: " + item.toString() + "\t value: " + facilityHouse.get(item));
+                System.out.println("House: " + item.toString() + "\t value: " + facilityHouse.get(item));
             }
         }
         if (facilityVilla != null) {
             System.out.println("Data Villa");
             for (Facility item : facilityVilla.keySet()) {
-                System.out.println("key: " + item.toString() + "\t value: " + facilityVilla.get(item));
+                System.out.println("Villa: " + item.toString() + "\t value: " + facilityVilla.get(item));
             }
         }
         if (facilityRoom != null) {
             System.out.println("Data Room");
             for (Facility item : facilityRoom.keySet()) {
-                System.out.println("key: " + item.toString() + "\t value: " + facilityRoom.get(item));
+                System.out.println("Room: " + item.toString() + "\t value: " + facilityRoom.get(item));
             }
         }
     }
@@ -83,7 +83,8 @@ public class FacilityServiceImpl implements DesignService {
         System.out.println("Add a new Villa ");
         Villa villa = validateInfoVilla();
         facilityVilla.put(villa, 0);
-        writeMapVillaTOCSV(facilityVilla,PATH_VILLA,false);
+
+        writeMapTOCSV(facilityVilla,PATH_VILLA,false);
         displayList();
     }
 
@@ -96,10 +97,8 @@ public class FacilityServiceImpl implements DesignService {
         String rentalType = RegexDesign.inputRentalType();
         String serviceCode = RegexDesign.inputMDVVilla();
         String roomStandard = RegexDesign.inputStandard();
-        double poolArea = RegexDesign.inputPoolArea();
-        int floors = RegexDesign.inputFloor();
         return new Villa(serviceName, usableArea, rentalCost, maxCapacity,
-                rentalType, serviceCode, roomStandard, poolArea, floors);
+                rentalType, serviceCode, roomStandard);
     }
 
     @Override
@@ -108,7 +107,7 @@ public class FacilityServiceImpl implements DesignService {
         System.out.println("Add a new Room");
         Room room = validateInfoRoom();
         facilityRoom.put(room, 0);
-        writeMapRoomTOCSV(facilityRoom,PATH_ROOM,false);
+        writeMapTOCSV(facilityRoom,PATH_ROOM,false);
         displayList();
     }
 
@@ -119,9 +118,8 @@ public class FacilityServiceImpl implements DesignService {
         double rentalCost = RegexDesign.inputRentalCost();
         int maxCapacity = RegexDesign.inputMaxCapacity();
         String rentalType = RegexDesign.inputRentalType();
-        String mDVRoom = RegexDesign.inputMDVRoom();
-        String freeServiceIncluded = RegexDesign.inputFreeService();
-        return new Room(serviceName, usableArea, rentalCost, maxCapacity, rentalType, mDVRoom, freeServiceIncluded);
+        String mDVRoom = RegexDesign.inputMDVRoom();;
+        return new Room(serviceName, usableArea, rentalCost, maxCapacity, rentalType, mDVRoom);
     }
 
     @Override
@@ -130,7 +128,7 @@ public class FacilityServiceImpl implements DesignService {
         System.out.println("Add a new House");
         House house = validateInfoHouse();
         facilityRoom.put(house, 0);
-        writeMapHouseTOCSV(facilityRoom, PATH_HOUSE, false);
+        writeMapTOCSV(facilityRoom, PATH_HOUSE, false);
         displayList();
     }
 
@@ -143,9 +141,8 @@ public class FacilityServiceImpl implements DesignService {
         String rentalType = RegexDesign.inputRentalType();
         String serviceCode = RegexDesign.inputMDVHouse();
         String roomStandard = RegexDesign.inputStandard();
-        int floors = RegexDesign.inputFloor();
 
-        return new House(serviceName, usableArea, rentalCost, maxCapacity, rentalType, serviceCode, roomStandard, floors);
+        return new House(serviceName, usableArea, rentalCost, maxCapacity, rentalType, serviceCode, roomStandard);
     }
 
     @Override

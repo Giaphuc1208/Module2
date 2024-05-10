@@ -2,7 +2,7 @@ package model.design;
 
 public class Facility {
     private String serviceName;
-    private String usableArea;
+    private double usableArea;
     private double rentalCost;
     private int maxCapacity;
     private String rentalType;
@@ -11,7 +11,7 @@ public class Facility {
     public Facility() {
     }
 
-    public Facility(String serviceName, String usableArea, double rentalCost, int maxCapacity, String rentalType, String serviceCode) {
+    public Facility(String serviceName, double usableArea, double rentalCost, int maxCapacity, String rentalType, String serviceCode) {
         this.serviceName = serviceName;
         this.usableArea = usableArea;
         this.rentalCost = rentalCost;
@@ -28,11 +28,11 @@ public class Facility {
         this.serviceName = serviceName;
     }
 
-    public String getUsableArea() {
+    public double getUsableArea() {
         return usableArea;
     }
 
-    public void setUsableArea(String usableArea) {
+    public void setUsableArea(double usableArea) {
         this.usableArea = usableArea;
     }
 
@@ -66,5 +66,16 @@ public class Facility {
 
     public void setServiceCode(String serviceCode) {
         ServiceCode = serviceCode;
+    }
+
+    @Override
+    public String toString() {
+        return "Facility:" +
+                "Service Name='" + serviceName + '\'' +
+                "| Usable Area='" + usableArea + '\'' +
+                "| Rental price=" + rentalCost +
+                "| Quantity of guests=" + maxCapacity +
+                "| Rental type='" + rentalType + '\'' +
+                "| Facility code='" + ServiceCode;
     }
 }

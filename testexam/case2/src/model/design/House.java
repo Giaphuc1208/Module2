@@ -4,18 +4,14 @@ import model.contract.Contract;
 
 public class House extends Facility {
     private String roomStandard;
-    private int floors;
 
 
     public House() {
     }
 
-    public House(String serviceName, String usableArea, double rentalCost, int maxCapacity, String rentalType, String serviceCode, String roomStandard) {
+    public House(String serviceName, double usableArea, double rentalCost, int maxCapacity, String rentalType, String serviceCode, String roomStandard) {
         super(serviceName, usableArea, rentalCost, maxCapacity, rentalType, serviceCode);
         this.roomStandard = roomStandard;
-    }
-
-    public House(String s, double v, double v1, int i, String s1, String s2, String s3, int i1) {
     }
 
 
@@ -27,13 +23,7 @@ public class House extends Facility {
         this.roomStandard = roomStandard;
     }
 
-    public int getFloors() {
-        return floors;
-    }
 
-    public void setFloors(int floors) {
-        this.floors = floors;
-    }
 
     @Override
     public String toString() {
@@ -44,13 +34,12 @@ public class House extends Facility {
                 "maxCapacity='" + getMaxCapacity() + '\'' +
                 "rentalType='" + getRentalType() + '\'' +
                 "roomStandard='" + roomStandard + '\'' +
-                ", floors=" + floors +
                 ", serviceCode=" + getServiceCode() +
                 '}';
     }
     public String getInfoHouseToCSV() {
         return getServiceName() + "," + getUsableArea() + "," + getRentalCost() + "," + getMaxCapacity() + "," +
-                getRentalType() + "," + getServiceCode() + "," + getRoomStandard() + "," + getFloors();
+                getRentalType() + "," + getServiceCode() + "," + getRoomStandard();
 
     }
 }

@@ -11,7 +11,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ReadAndWriteToCSVFacility {
-    public static void writeMapHouseTOCSV(Map<Facility, Integer> linkedHashMapHouse, String pathFile, boolean append) {
+    public static void writeMapTOCSV(Map<Facility, Integer> linkedHashMapHouse, String pathFile, boolean append) {
         FileWriter fileWriter;
         try {
             fileWriter = new FileWriter(pathFile, append);
@@ -21,6 +21,15 @@ public class ReadAndWriteToCSVFacility {
                     House house = (House) facility;
                     bufferedWriter.write(house.getInfoHouseToCSV());
                 }
+                if (facility instanceof Room    ) {
+                    Room room = (Room) facility;
+                    bufferedWriter.write(room.getInfoRoomToCSV());
+                }
+                if (facility instanceof Villa) {
+                    Villa villa = (Villa) facility;
+                    bufferedWriter.write(villa.getInfoVillaToCSV());
+                }
+                bufferedWriter.newLine();
             }
             bufferedWriter.close();
         } catch (IOException e) {
@@ -28,38 +37,6 @@ public class ReadAndWriteToCSVFacility {
         }
     }
 
-    public static void writeMapRoomTOCSV(Map<Facility, Integer> linkedHashMapRoom, String pathFile, boolean append) {
-        FileWriter fileWriter;
-        try {
-            fileWriter = new FileWriter(pathFile, append);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            for (Facility facility : linkedHashMapRoom.keySet()) {
-                if (facility instanceof Room    ) {
-                    Room room = (Room) facility;
-                    bufferedWriter.write(room.getInfoRoomToCSV());
-                }
-            }
-            bufferedWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public static void writeMapVillaTOCSV(Map<Facility, Integer> linkedHashMapVilla, String pathFile, boolean append) {
-        FileWriter fileWriter;
-        try {
-            fileWriter = new FileWriter(pathFile, append);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            for (Facility facility : linkedHashMapVilla.keySet()) {
-                if (facility instanceof Villa) {
-                    Villa villa = (Villa) facility;
-                    bufferedWriter.write(villa.getInfoVillaToCSV());
-                }
-            }
-            bufferedWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     public static LinkedHashMap<Facility, Integer> readHouseToCSV(String pathFile) {
         LinkedHashMap<Facility, Integer> linkedHashMap = new LinkedHashMap<>();
         FileReader fileReader;
@@ -72,7 +49,7 @@ public class ReadAndWriteToCSVFacility {
             while ((line = bufferedReader.readLine()) != null) {
                 map = line.split(",");
                 house = new House(map[0], Double.parseDouble(map[1]), Double.parseDouble(map[2]), Integer.parseInt(map[3]),
-                        map[4], map[5], map[6], Integer.parseInt(map[7]));
+                        map[4], map[5], map[6]);
                 linkedHashMap.put(house, 0);
             }
         } catch (IOException e) {
@@ -93,7 +70,7 @@ public class ReadAndWriteToCSVFacility {
             while ((line = bufferedReader.readLine()) != null) {
                 map = line.split(",");
                 villa = new Villa(map[0], Double.parseDouble(map[1]), Double.parseDouble(map[2]), Integer.parseInt(map[3]),
-                        map[4], map[5], map[6], Double.parseDouble(map[7]), Integer.parseInt(map[8]));
+                        map[4], map[5], map[6]);
                 linkedHashMap.put(villa, 0);
             }
         } catch (IOException e) {
@@ -115,7 +92,7 @@ public class ReadAndWriteToCSVFacility {
             while ((line = bufferedReader.readLine()) != null) {
                 map = line.split(",");
                 room = new Room(map[0], Double.parseDouble(map[1]), Double.parseDouble(map[2]), Integer.parseInt(map[3]), map[4],
-                        map[5], map[6]);
+                        map[5]);
                 linkedHashMap.put(room, 0);
             }
         } catch (IOException e) {

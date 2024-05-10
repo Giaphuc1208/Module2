@@ -51,7 +51,7 @@ public class Staff extends Person {
     @Override
     public String toString() {
         if (isGender()) return
-                "Employee{" +
+                "Staff{" +
                         "fullName='" + getFullName() + '\'' +
                         ", dateOfBirth=" + getBirthday() +
                         ", gender=" + "male" +
@@ -65,7 +65,7 @@ public class Staff extends Person {
                         '}';
         else {
             return
-                    "Employee{" +
+                    "Staff{" +
                             "fullName='" + getFullName() + '\'' +
                             ", dateOfBirth=" + getBirthday() +
                             ", gender=" + "female" +

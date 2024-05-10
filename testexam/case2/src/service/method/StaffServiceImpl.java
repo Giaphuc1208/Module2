@@ -38,7 +38,7 @@ public class StaffServiceImpl implements StaffService {
     @Override
     public void addNewStaff() {
         List<Staff> staffArrayList = readListStaffTOCSV(PATH_STAFF);
-        System.out.println("You want update ? \n" +
+        System.out.println("You want add new one ? \n" +
                 "1.Yes\n" +
                 "2.No");
         int check = RegexMenu.inputChoiceMenu();

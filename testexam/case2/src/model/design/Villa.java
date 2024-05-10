@@ -1,16 +1,19 @@
 package model.design;
 
-import model.contract.Contract;
-
 public class Villa extends Facility {
     private String roomStandard;
     private double poolArea;
     private int floors;
 
-    public Villa() {
-    }
 
-    public Villa(String s, double v, double v1, int i, String s1, String s2, String s3, double v2, int i1) {
+
+
+
+    public Villa(String serviceName, double usableArea, double rentalCost, int maxCapacity, String rentalType, String serviceCode, String roomStandard) {
+        super(serviceName, usableArea, rentalCost, maxCapacity, rentalType, serviceCode);
+        this.roomStandard = roomStandard;
+        this.poolArea = poolArea;
+        this.floors = floors;
     }
 
     public int getFloors() {
@@ -21,7 +24,7 @@ public class Villa extends Facility {
         this.floors = floors;
     }
 
-    public Villa(String serviceName, String usableArea, double rentalCost, int maxCapacity, String rentalType, String serviceCode, String roomStandard, int floors) {
+    public Villa(String serviceName, double usableArea, double rentalCost, int maxCapacity, String rentalType, String serviceCode, String roomStandard, int floors) {
         super(serviceName, usableArea, rentalCost, maxCapacity, rentalType, serviceCode);
         this.roomStandard = roomStandard;
     }
@@ -53,13 +56,11 @@ public class Villa extends Facility {
                 "maxCapacity='" + getMaxCapacity() + '\'' +
                 "rentalType='" + getRentalType() + '\'' +
                 "roomStandard='" + roomStandard + '\'' +
-                ", poolArea=" + poolArea +
-                ", floors=" + floors +
                 ", ServiceCode='" + getServiceCode() + '\'' +
                 '}';
     }
     public String getInfoVillaToCSV() {
         return getServiceName() + "," + getUsableArea() + "," + getRentalCost() + "," + getMaxCapacity() + "," +
-                getRentalType() + "," + getServiceCode() + "," + getRoomStandard() + "," + getPoolArea() + "," + getFloors();
+                getRentalType() + "," + getServiceCode() + "," + getRoomStandard();
     }
 }
