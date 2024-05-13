@@ -9,7 +9,6 @@ import static controller.DukeCasaApartmentController.displayMainMenu;
 
 public class BlueprintController {
     static int choice = -1;
-    static Scanner input = new Scanner(System.in);
 
     static void FacilityManagement() {
         FacilityServiceImpl facilityService = new FacilityServiceImpl();
