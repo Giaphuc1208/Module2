@@ -18,7 +18,7 @@ public class StudioDeluxe extends Facility {
 
     @Override
     public String toString() {
-        return "Deluxe Studio" +
+        return "Deluxe Studio: " +
                 "serviceName='" + getServiceName() + '\'' +
                 "usableArea='" + getUsableArea() + '\'' +
                 "rentalCost='" + getRentalCost() + '\'' +

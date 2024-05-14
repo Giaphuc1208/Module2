@@ -1,2 +1,5 @@
-package setting.intf;public interface Service {
+package setting.intf;
+
+public interface Service {
+    void displayAll();
 }

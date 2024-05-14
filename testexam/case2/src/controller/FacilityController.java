@@ -3,11 +3,9 @@ package controller;
 import service.data.RegexMenu;
 import service.method.FacilityServiceImpl;
 
-import java.util.Scanner;
-
 import static controller.DukeCasaApartmentController.displayMainMenu;
 
-public class BlueprintController {
+public class FacilityController {
     static int choice = -1;
 
     static void FacilityManagement() {

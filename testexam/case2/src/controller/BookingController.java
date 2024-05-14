@@ -4,7 +4,7 @@ import service.data.RegexMenu;
 
 import java.util.Scanner;
 
-import static controller.BlueprintController.FacilityManagement;
+import static controller.FacilityController.FacilityManagement;
 import static controller.DukeCasaApartmentController.displayMainMenu;
 
 public class BookingController {

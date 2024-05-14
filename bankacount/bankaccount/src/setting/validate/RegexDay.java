@@ -1,4 +1,4 @@
-package setting;
+package setting.validate;
 
 import java.io.IOException;
 import java.time.LocalDate;

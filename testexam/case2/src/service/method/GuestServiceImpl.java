@@ -12,7 +12,7 @@ import java.util.List;
 import static service.data.ReadAndWriteToCSV.readListCustomerTOCSV;
 import static service.data.ReadAndWriteToCSV.writeListCustomerToCSV;
 
-public class CustomerServiceImpl implements GuestService  {
+public class GuestServiceImpl implements GuestService  {
     public static final String PATH_GUEST ="D:\\Dowload\\Module2\\baitap\\testexam\\case2\\src\\file\\guest.csv";
 
     @Override

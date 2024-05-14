@@ -4,11 +4,12 @@ import service.data.RegexMenu;
 
 import static controller.StaffController.staffManagement;
 import static controller.GuestController.GuestManagement;
-import static controller.BlueprintController.FacilityManagement;
+import static controller.FacilityController.FacilityManagement;
 import static controller.BookingController.BookingManagement;
 
 public class DukeCasaApartmentController {
     public static void main(String[] args) {
+
         displayMainMenu();
     }
     static int choice = -1;

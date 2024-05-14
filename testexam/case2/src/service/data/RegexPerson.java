@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class RegexPerson {
@@ -13,14 +14,14 @@ public class RegexPerson {
 
     private static final String REGEX_NAME = "(^[\\w'\\-,.][^0-9_!¡?÷?¿/\\\\+=@#$%ˆ&*(){}|~<>;:]{2,}$)";
     private static final String REGEX_ID_CARD = "[0-9]{9}";
-    private static final String REGEX_PHONE_NUMBER = "[84][0-9]{10}";
+    private static final String REGEX_PHONE_NUMBER = "[0-9]{10}";
     private static final String REGEX_EMAIL = ("\\b[a-z0-9._%-]+@[a-z0-9.-]+\\.[a-z]{2,4}\\b");
     private static final String REGEX_ID_STAFF = "[0-9]{3}";
-    private static final String REGEX_POSITION = "([a-z])\\w+";
-    private static final String REGEX_LEVEL = "([a-z])\\w+";
-    private static final String REGEX_GUEST_ID = "[0-9]";
+    private static final String REGEX_POSITION = "([A-B])\\w+";
+        private static final String REGEX_LEVEL = "([a-z])\\w+";
+    private static final String REGEX_GUEST_ID = "[0-9]{3}";
     private static final String REGEX_TYPE_GUEST = "([a-z])\\w+";
-    private static final String REGEX_ADDRESS = "[0-9]+ ([A-Z][a-z ]*)+";
+    private static final String REGEX_ADDRESS = "(^[\\w'\\-,.][^0-9_!¡?÷?¿/\\\\+=@#$%ˆ&*(){}|~<>;:]{2,}$)";
 
     public static LocalDate inputBirthday() throws AgeException {
         LocalDate birthday;
@@ -53,9 +54,12 @@ public class RegexPerson {
     }
 
     public static boolean inputGender(){
-        System.out.println("Enter Male or Female or others: ");
-        boolean newGender = Boolean.parseBoolean(scanner.nextLine());
-        return newGender;
+        System.out.println("Enter Male or Female: ");
+        String newGender = scanner.nextLine();
+        if(Objects.equals(newGender, "Male")){
+            return true;
+        }
+        return false;
     }
 
     public static String inputIDCard(){
