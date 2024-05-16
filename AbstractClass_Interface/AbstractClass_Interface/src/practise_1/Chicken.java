@@ -1,4 +1,4 @@
-package practise1;
+package practise_1;
 
 public class Chicken extends Animal implements Edible {
 

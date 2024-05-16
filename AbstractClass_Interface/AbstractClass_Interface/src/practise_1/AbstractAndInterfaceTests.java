@@ -1,4 +1,4 @@
-package practise1;
+package practise_1;
 
 public class AbstractAndInterfaceTests {
     public static void main(String[] args) {
