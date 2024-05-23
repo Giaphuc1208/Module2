@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="26d4689c-e9a0-4be1-9169-74228afd3f21" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/AbstractClass_Interface.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/out/production/AbstractClass_Interface/AbstractClass_Interface.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arrayList_linkedList/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arrayList_linkedList/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arrayList_linkedList/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arrayList_linkedList/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arrayList_linkedList/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arrayList_linkedList/arrayList_linkedList.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arrayList_linkedList/arrayList_linkedList/src/exercise1/ArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arrayList_linkedList/arrayList_linkedList/src/exercise1/TestArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../arrayList_linkedList/arrayList_linkedList/src/exercise2/MyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bankacount/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bankacount/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bankacount/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bankacount/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bankacount/bankacount.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../cleancode/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../cleancode/cleancode.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../endingmodule/endingmodule/src/endingmodule.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../stack_queue/stack_queue/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../stack_queue/stack_queue/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../stack_queue/stack_queue/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../stack_queue/stack_queue/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../stack_queue/stack_queue/src/practice_1/GenericStackClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../stack_queue/stack_queue/src/practice_1/MyGenericStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../stack_queue/stack_queue/src/practice_2/LinkedListQueueClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../stack_queue/stack_queue/src/practice_2/MyLinkedListQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../stack_queue/stack_queue/src/practice_2/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../testexam/case2/src/case2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/exercise_James/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/exercise_James/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/exercise_James/inheritance/Resizeable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/exercise_James/inheritance/Resizeable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/exercise_James/model/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/exercise_James/model/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/exercise_James/model/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/exercise_James/model/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/exercise_James/model/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/AbstractClass_Interface/src/exercise_James/model/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AbstractClass_Interface/out/production/AbstractClass_Interface/exercise_James/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/out/production/AbstractClass_Interface/exercise_James/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AbstractClass_Interface/out/production/AbstractClass_Interface/exercise_James/inheritance/Resizeable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/out/production/AbstractClass_Interface/exercise_James/inheritance/Resizeable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AbstractClass_Interface/out/production/AbstractClass_Interface/exercise_James/model/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/out/production/AbstractClass_Interface/exercise_James/model/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AbstractClass_Interface/out/production/AbstractClass_Interface/exercise_James/model/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/out/production/AbstractClass_Interface/exercise_James/model/Rectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AbstractClass_Interface/out/production/AbstractClass_Interface/exercise_James/model/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../AbstractClass_Interface/out/production/AbstractClass_Interface/exercise_James/model/Square.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../arrayList_linkedList/arrayList_linkedList/src/practice2/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../arrayList_linkedList/arrayList_linkedList/src/practice2/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../arrayList_linkedList/arrayList_linkedList/src/practice2/TestMyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../arrayList_linkedList/arrayList_linkedList/src/practice2/TestMyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bankacount/bankaccount/src/setting/setting_main/ChargeAccountSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bankacount/bankaccount/src/setting/setting_main/ChargeAccountSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../endingmodule/endingmodule/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../endingmodule/endingmodule/src/controller/ThuongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../endingmodule/endingmodule/src/controller/ThuongController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../endingmodule/endingmodule/src/model/BenhNhanVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../endingmodule/endingmodule/src/model/BenhNhanVip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../endingmodule/endingmodule/src/setting/method/BenhNhanThuongImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../endingmodule/endingmodule/src/setting/method/BenhNhanThuongImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../endingmodule/endingmodule/src/setting/method/ReadAndWriteFileToCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../endingmodule/endingmodule/src/setting/method/ReadAndWriteFileToCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../testexam/case2/src/file/guest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../testexam/case2/src/file/guest.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../testexam/case2/src/service/data/RegexPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../testexam/case2/src/service/data/RegexPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../testexam/case2/src/service/method/GuestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../testexam/case2/src/service/method/GuestServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2goN0sk1JiOpszYhFserws1tJwz" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.GenericStackClient.executor": "Run",
+    "Application.LinkedListQueueClient.executor": "Run",
+    "Application.MyGenericStack$GenericStackClient.executor": "Run",
+    "Application.TestStack.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.LinkedListQueueClient">
+    <configuration name="GenericStackClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice1.GenericStackClient" />
+      <module name="stackandqueue" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practice1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedListQueueClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice2.LinkedListQueueClient" />
+      <module name="stackandqueue" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practice2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyGenericStack$GenericStackClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice1.MyGenericStack$GenericStackClient" />
+      <module name="stackandqueue" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practice1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LinkedListQueueClient" />
+        <item itemvalue="Application.MyGenericStack$GenericStackClient" />
+        <item itemvalue="Application.GenericStackClient" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26d4689c-e9a0-4be1-9169-74228afd3f21" name="Changes" comment="" />
+      <created>1716359753498</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716359753498</updated>
+      <workItem from="1716359754547" duration="2968000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

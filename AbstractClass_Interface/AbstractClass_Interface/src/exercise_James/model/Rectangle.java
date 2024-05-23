@@ -39,9 +39,8 @@ public class Rectangle extends Geometry implements Resizeable {
     }
 
     @Override
-    public void resize(double percent) {
-        this.width = this.width + this.width / 100 * percent;
-        this.length = this.length + this.length / 100 * percent;
+    public double resize(double percent) {
+        return getArea() * (100 + percent) / 100;
     }
 
     @Override

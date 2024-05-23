@@ -40,7 +40,7 @@ public class ReadAndWriteFileToCSV {
                     , dateInput(linked[5]), linked[6], Double.parseDouble(linked[7]));
             benhNhanThuongList.add(benhNhanThuong);
         }
-        return benhNhanThuongList;
+        return (Map<BenhNhanThuong, Integer>) benhNhanThuongList;
     }
 
     public static List<BenhNhanVip> readListVipFromCSV(String pathFile) {

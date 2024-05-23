@@ -46,13 +46,13 @@ public class BenhNhanVip extends BenhAn {
 
     @Override
     public String toString() {
-        if(isLoaiVip()) return "BenhNhanVip{" +super.toString() +
+        if(isLoaiVip()) return "BenhNhanVip{" + super.toString() +
                 "loaiVip='" + loaiVip + '\'' +
                 ", uuDai='" + uuDai + '\'' +
                 ", thoiHanVip='" + thoiHanVip + '\'' +
                 "} ";
         else{
-            return "BenhNhanVip{" +super.toString() +
+            return "BenhNhanVip{" + super.toString() +
                     "loaiVip='" + loaiVip + '\'' +
                     ", uuDai='" + uuDai + '\'' +
                     ", thoiHanVip='" + thoiHanVip + '\'' +

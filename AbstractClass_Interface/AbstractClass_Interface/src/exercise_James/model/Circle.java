@@ -27,8 +27,8 @@ public class Circle extends Geometry implements Resizeable{
     }
 
     @Override
-    public void resize(double percent) {
-        this.radius = this.radius * percent/100 + this.radius;
+    public double resize(double percent) {
+        return getArea() * (100 + percent) / 100;
     }
 
     @Override

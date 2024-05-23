@@ -15,7 +15,6 @@ import static service.data.ReadAndWriteToCSV.writeListCustomerToCSV;
 public class GuestServiceImpl implements GuestService  {
     public static final String PATH_GUEST ="D:\\Dowload\\Module2\\baitap\\testexam\\case2\\src\\file\\guest.csv";
 
-    @Override
 
     public List findAll() {
         List<Guest> guestsLinkedList = new LinkedList<>();
@@ -53,7 +52,7 @@ public class GuestServiceImpl implements GuestService  {
         try{
             dayofBirth = RegexPerson.inputBirthday();
         }catch (AgeException e){
-            System.out.println("AAA");
+            System.out.println("");
         }
         boolean gender = RegexPerson.inputGender();
         String identityCard = RegexPerson.inputIDCard();

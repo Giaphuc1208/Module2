@@ -2,14 +2,13 @@ package exercise_James.model;
 
 import exercise_James.inheritance.Colorable;
 import exercise_James.inheritance.Geometry;
-import exercise_James.inheritance.Resizeable;
 
 
-public class Square extends Geometry implements Resizeable, Colorable {
-    private double length = 1;
+public class Square extends Geometry implements Colorable {
+    private double length = 1.0;
 
 
-    public Square(double length) {
+    public Square() {
         this.length = length;
     }
 
@@ -27,10 +26,6 @@ public class Square extends Geometry implements Resizeable, Colorable {
                 "length= " + length + ", Area= " + getArea();
     }
 
-    @Override
-    public void resize(double percent) {
-        this.length = this.length+ this.length * percent / 100 ;
-    }
 
     @Override
     public void howToColor() {
@@ -39,6 +34,6 @@ public class Square extends Geometry implements Resizeable, Colorable {
 
     @Override
     public Double getArea() {
-        return length * length;
+        return Math.pow(length, 2);
     }
 }

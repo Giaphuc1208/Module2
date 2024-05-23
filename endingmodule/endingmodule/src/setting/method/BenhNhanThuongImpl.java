@@ -33,7 +33,7 @@ public class BenhNhanThuongImpl implements BenhAnThuong {
 
     @Override
     public void deleteBenhAn() {
-        List<BenhNhanThuong> benhNhanThuongs = readListThuongFromCSV(PATH_NORMAL);
+        List<BenhNhanThuong> benhNhanThuongs = (List<BenhNhanThuong>) readListThuongFromCSV(PATH_NORMAL);
         displayAll();
         System.out.println("You want delete ? \n" +
                 "1.Yes\n" +
@@ -52,7 +52,7 @@ public class BenhNhanThuongImpl implements BenhAnThuong {
                         break;
                     }
                 }
-                if (!isExits){
+                if (!isExits) {
                     System.out.println("Khong tim thay!!");
                     deleteBenhAn();
                 }
@@ -67,16 +67,17 @@ public class BenhNhanThuongImpl implements BenhAnThuong {
 
 
     }
+
     @Override
-    public void displayList(){
-        Map<BenhNhanThuong, Integer> benhNhanThuongIntegerMap =readListThuongFromCSV(PATH_NORMAL);
+    public void displayList() {
+        Map<BenhNhanThuong, Integer> benhNhanThuongIntegerMap = readListThuongFromCSV(PATH_NORMAL);
         System.out.println("Danh sach benh nhan: ");
-if (benhNhanThuongIntegerMap!= null){
-    System.out.println("Benh nhan");
-    for (BenhNhanThuong item : benhNhanThuongIntegerMap.keySet()){
-        System.out.println("Benh nhan thuong: " + item.toString() );
-    }
-}
+        if (benhNhanThuongIntegerMap != null) {
+            System.out.println("Benh nhan");
+            for (BenhNhanThuong item : benhNhanThuongIntegerMap.keySet()) {
+                System.out.println("Benh nhan thuong: " + item.toString() + "\t value: " + benhNhanThuongIntegerMap.get(item));
+            }
+        }
     }
 
     @Override

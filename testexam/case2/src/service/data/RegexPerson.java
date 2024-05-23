@@ -17,7 +17,7 @@ public class RegexPerson {
     private static final String REGEX_PHONE_NUMBER = "[0-9]{10}";
     private static final String REGEX_EMAIL = ("\\b[a-z0-9._%-]+@[a-z0-9.-]+\\.[a-z]{2,4}\\b");
     private static final String REGEX_ID_STAFF = "[0-9]{3}";
-    private static final String REGEX_POSITION = "([A-B])\\w+";
+    private static final String REGEX_POSITION = "([A-Z])\\w+";
         private static final String REGEX_LEVEL = "([a-z])\\w+";
     private static final String REGEX_GUEST_ID = "[0-9]{3}";
     private static final String REGEX_TYPE_GUEST = "([a-z])\\w+";
