@@ -21,9 +21,9 @@ public class SearchElement {
         int x = scanner.nextInt();
         int index = list.indexOf(x);
         if (index != -1){
-            System.out.println("Element: " + x + "found at index: " + index);
+            System.out.println("Element: " + x + " found at index: " + index);
         } else {
-            System.out.println("Element: " + x + "not found in array");
+            System.out.println("Element: " + x + " not found in array");
         }
     }
 }

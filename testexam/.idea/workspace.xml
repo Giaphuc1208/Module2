@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fa9ae58f-a508-4a38-999d-65e0adfbaef5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../bankacount/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bankacount/bankaccount/src/controller/inter_iml/iml/ChargeAccountIml.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bankacount/bankaccount/src/view/BankController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../endingmodule/endingmodule/src/controller/MedicalRecordManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../endingmodule/endingmodule/src/model/NormalMedicalRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../endingmodule/endingmodule/src/model/VipMedicalRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../file/file/src/exercise1/CopyFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../file/file/src/exercise1/targetFile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../file/file/src/exercise2/Country.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../file/file/src/exercise2/Country.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../file/file/src/exercise2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../file/file/src/exercise2/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/testexam.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testexam/src/testexam.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Debug/Debug/Debug.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Map/Map/src/exercise_james/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Map/Map/src/exercise_james/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Map/Map/src/homework_exercise/SearchElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Map/Map/src/homework_exercise/SearchElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../arrayList_linkedList/arrayList_linkedList/src/exercise2/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../arrayList_linkedList/arrayList_linkedList/src/exercise2/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bankacount/bankaccount/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bankacount/bankaccount/src/bank_account.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../bankacount/bankaccount/src/controller/data/bank_account.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bankacount/bankaccount/src/setting/intf/ChargeAccountIntf.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bankacount/bankaccount/src/controller/inter_iml/ChargeAccountIntf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bankacount/bankaccount/src/setting/intf/SavingAccountIntf.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bankacount/bankaccount/src/controller/inter_iml/SavingAccountIntf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bankacount/bankaccount/src/setting/intf/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bankacount/bankaccount/src/controller/inter_iml/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bankacount/bankaccount/src/setting/setting_main/ChargeAccountSetting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bankacount/bankaccount/src/setting/validate/ReadAndWriteCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bankacount/bankaccount/src/controller/validate/ReadAndWriteCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bankacount/bankaccount/src/setting/validate/RegexChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bankacount/bankaccount/src/controller/validate/RegexChoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bankacount/bankaccount/src/setting/validate/RegexDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bankacount/bankaccount/src/controller/validate/RegexDay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/controller/ThuongController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/controller/VipController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/file/benhnhanthuong.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../endingmodule/endingmodule/src/view/medical_record.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/file/benhnhanvip.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../file/file/src/exercise1/sourceFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/model/BenhAn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../endingmodule/endingmodule/src/model/MedicalRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/model/BenhNhanThuong.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/model/BenhNhanVip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/setting/inter/BenhAn1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/setting/inter/BenhAnThuong.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/setting/inter/BenhAnVip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/setting/method/BenhNhanThuongImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/setting/method/ReadAndWriteFileToCSV.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/setting/validate/AgeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/setting/validate/RegexBenhAn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../endingmodule/endingmodule/src/setting/validate/RegexMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../file/file/src/exercise1/Country.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../file/file/src/exercise1/CountryManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/case2/case2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/case2/src/service/method/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/case2/src/service/method/FacilityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testexam/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../endingmodule/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testexam/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testexam/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testexam/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testexam/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testexam/testexam.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2h8FjdQFVqQQpcziJvpxPOqctBJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa9ae58f-a508-4a38-999d-65e0adfbaef5" name="Changes" comment="" />
+      <created>1716967933262</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716967933262</updated>
+      <workItem from="1716967934328" duration="2000" />
+      <workItem from="1716967944777" duration="21000" />
+      <workItem from="1717031789838" duration="322000" />
+      <workItem from="1717059011659" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

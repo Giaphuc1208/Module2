@@ -7,6 +7,7 @@ import model.blueprint.StudioDeluxe;
 import service.data.RegexDesign;
 import service.intef.DesignService;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;

@@ -58,7 +58,7 @@ public class Menu {
         System.out.println("Please enter product name: ");
         String name = scanner.nextLine();
         System.out.println("Please enter product price: ");
-        double price = scanner.nextDouble();
+        double price = Double.parseDouble(scanner.nextLine());
         Product newProduct = new Product(name, price);
         productManager.addProduct(newProduct);
         System.out.println("Complete");
@@ -72,9 +72,6 @@ public class Menu {
                 Product pr = productManager.findProductById(inputID);
                 productManager.editProduct(pr);
                 break;
-            } catch (InputMismatchException e){
-                System.err.println("Please enter the correct ID!!");
-                scanner.next();
             } catch (Exception e){
                 System.out.println(e.getMessage());
                 return;
