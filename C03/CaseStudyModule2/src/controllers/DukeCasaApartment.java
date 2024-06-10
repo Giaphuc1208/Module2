@@ -1,6 +1,6 @@
-package views;
+package controllers;
 
-import controllers.BookingController;
+//import controllers.BookingController;
 import controllers.RoomController;
 import ultils.Input;
 
@@ -22,7 +22,7 @@ public class DukeCasaApartment {
                     roomController.menuRoom();
                     break;
                 case 2:
-                    bookingController.menuOrder();
+                    bookingController.menuBooking();
                     break;
                 case 3:
                     return;

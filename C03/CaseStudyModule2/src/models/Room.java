@@ -1,4 +1,4 @@
-package models.room;
+package models;
 
 public class Room {
     private String roomNumber;
@@ -40,5 +40,9 @@ public class Room {
         return "Room: " + roomNumber + '\'' +
                 ", Type room: '" + typeRoom + '\'' +
                 ", Price: " + price;
+    }
+
+    public String toCsv() {
+        return roomNumber + "," + typeRoom + "," +price;
     }
 }
